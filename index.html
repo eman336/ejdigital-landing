@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJ Digital | Modern Web Architecture</title>
+    <style>
+        /* Modern, Eye-Catching Color Scheme */
+        :root {
+            --bg-dark: #0f172a;      /* Deep Slate for a professional baseline */
+            --bg-card: #1e293b;      /* Lighter Slate for depth */
+            --text-light: #f8fafc;   /* Crisp White */
+            --text-muted: #94a3b8;   /* Soft Gray */
+            --brand-primary: #f97316; /* Vibrant Orange for high-contrast CTA */
+            --brand-hover: #ea580c;
+            --radius: 12px;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Hero Image Integration */
+        .hero-banner {
+            width: 100%;
+            height: 60vh;
+            min-height: 400px;
+            background: linear-gradient(to bottom, rgba(15, 23, 42, 0.3), rgba(15, 23, 42, 1)), 
+                        url('index2.png') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            padding-bottom: 3rem;
+            text-align: center;
+        }
+
+        .hero-banner h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-banner h1 span {
+            color: var(--brand-primary);
+        }
+
+        .hero-banner p {
+            font-size: 1.4rem;
+            color: var(--text-muted);
+            max-width: 600px;
+        }
+
+        /* Streamlined Services Section */
+        main {
+            width: 100%;
+            max-width: 1000px;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .intro-text {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .service-box {
+            background-color: var(--bg-card);
+            padding: 2.5rem 2rem;
+            border-radius: var(--radius);
+            border-top: 4px solid var(--bg-card);
+            transition: var(--transition);
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+            border-top: 4px solid var(--brand-primary);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .service-box h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .service-box p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        /* Professional Contact CTA */
+        .cta-section {
+            background: linear-gradient(145deg, var(--bg-card) 0%, #0b1120 100%);
+            width: 100%;
+            padding: 5rem 2rem;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .cta-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--brand-primary);
+            color: #fff;
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--brand-hover);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(249, 115, 22, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .hero-banner h1 { font-size: 3rem; }
+            .hero-banner p { font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-banner">
+        <h1>EJ <span>Digital</span></h1>
+        <p>Architecting Solutions for Your Business Needs & Goals.</p>
+    </div>
+
+    <main>
+        <p class="intro-text">We engineer scalable, high-performance web solutions designed to modernize your business infrastructure and drive tangible results.</p>
+        
+        <div class="services-container">
+            <div class="service-box">
+                <h3>Custom Web Architecture</h3>
+                <p>Designing robust, multi-tenant digital platforms built the right way from day one, ensuring your business scales effortlessly.</p>
+            </div>
+            
+            <div class="service-box">
+                <h3>Lead Generation Systems</h3>
+                <p>Developing high-conversion, programmatic engines that automate customer acquisition and keep you ahead of the competition.</p>
+            </div>
+            
+            <div class="service-box">
+                <h3>Enterprise Consulting</h3>
+                <p>Providing reliable support and strategic modernization for established systems, optimizing logic without disrupting core operations.</p>
+            </div>
+        </div>
+    </main>
+
+    <section class="cta-section">
+        <h2>Ready to Build It Right?</h2>
+        <p>If you need a reliable partner to architect a custom web solution tailored to your exact business requirements, let's start a conversation.</p>
+        
+        <a href="mailto:emmanueljones150@gmail.com?subject=Project%20Inquiry:%20EJ%20Digital&body=Hello%20EJ%20Digital%20Team,%0D%0A%0D%0AI%20am%20reaching%20out%20to%20discuss%20a%20potential%20web%20project.%0D%0A%0D%0AProject%20Overview:%0D%0A[Please%20briefly%20describe%20your%20needs]%0D%0A%0D%0ABusiness%20Goals:%0D%0A[What%20are%20you%20looking%20to%20achieve?]%0D%0A%0D%0AThank%20you," class="btn-primary">Email Us About Your Project</a>
+    </section>
+
+</body>
+</html>
